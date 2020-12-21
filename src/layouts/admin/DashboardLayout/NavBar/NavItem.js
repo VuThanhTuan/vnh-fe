@@ -1,36 +1,36 @@
-import React from "react";
-import clsx from "clsx";
-import PropTypes from "prop-types";
-import { Button, ListItem, makeStyles } from "@material-ui/core";
-import Link from "../../../../components/Link";
+import React from 'react';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { Button, ListItem, makeStyles } from '@material-ui/core';
+import Link from '../../../../components/Link';
 
 const useStyles = makeStyles((theme) => ({
   item: {
-    display: "flex",
+    display: 'flex',
     paddingTop: 0,
     paddingBottom: 0,
   },
   button: {
     color: theme.palette.text.secondary,
     fontWeight: theme.typography.fontWeightMedium,
-    justifyContent: "flex-start",
+    justifyContent: 'flex-start',
     letterSpacing: 0,
-    padding: "10px 8px",
-    textTransform: "none",
-    width: "100%",
+    padding: '10px 8px',
+    textTransform: 'none',
+    width: '100%',
   },
   icon: {
     marginRight: theme.spacing(1),
   },
   title: {
-    marginRight: "auto",
+    marginRight: 'auto',
   },
   active: {
     color: theme.palette.primary.main,
-    "& $title": {
+    '& $title': {
       fontWeight: theme.typography.fontWeightMedium,
     },
-    "& $icon": {
+    '& $icon': {
       color: theme.palette.primary.main,
     },
   },
@@ -63,6 +63,13 @@ NavItem.propTypes = {
   href: PropTypes.string,
   icon: PropTypes.elementType,
   title: PropTypes.string,
+};
+
+NavItem.defaultProps = {
+  className: '',
+  href: '/',
+  icon: null,
+  title: '',
 };
 
 export default NavItem;

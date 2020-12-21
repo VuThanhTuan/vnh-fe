@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import Grid from "@material-ui/core/Grid";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import LockIcon from "@material-ui/icons/Lock";
-import Button from "@material-ui/core/Button";
-import PropTypes from "prop-types";
-import "./SignIn.module.scss";
-import { Formik, Form, Field } from "formik";
-import { makeStyles } from "@material-ui/core/styles";
-import Input from "../../../Form/Input";
-import { SignInValidation } from "./validation";
-import appTheme from "../../../../theme";
+import React, { useState } from 'react';
+import Grid from '@material-ui/core/Grid';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import LockIcon from '@material-ui/icons/Lock';
+import Button from '@material-ui/core/Button';
+import './SignIn.module.scss';
+import { Formik, Form, Field } from 'formik';
+import { makeStyles } from '@material-ui/core/styles';
+import Input from '../../../Form/Input';
+import SignInValidation from './validation';
+import appTheme from '../../../../theme';
 
 const useStyles = makeStyles({
   errorMessage: {
@@ -18,15 +17,16 @@ const useStyles = makeStyles({
   },
 });
 
-function SignIn(props) {
+function SignIn() {
+  // eslint-disable-next-line no-unused-vars
   const { loginErrorMessage, setLoginErrorMessage } = useState();
 
   const classes = useStyles();
   const makeFormAttr = (pr) => ({
     userName: {
-      name: "userName",
-      label: "Tài khoản",
-      type: "text",
+      name: 'userName',
+      label: 'Tài khoản',
+      type: 'text',
       component: Input,
       value: pr.values.userName,
       onChange: pr.handleChange,
@@ -38,9 +38,9 @@ function SignIn(props) {
       ),
     },
     password: {
-      name: "password",
-      label: "Mật khẩu",
-      type: "password",
+      name: 'password',
+      label: 'Mật khẩu',
+      type: 'password',
       component: Input,
       value: pr.values.password,
       onChange: pr.handleChange,
@@ -53,13 +53,14 @@ function SignIn(props) {
     },
   });
 
+  // eslint-disable-next-line no-unused-vars
   const loginFunc = (value) => {};
 
   return (
     <Formik
       initialValues={{
-        userName: "admin",
-        password: "Admin@123",
+        userName: 'admin',
+        password: 'Admin@123',
       }}
       onSubmit={(values) => {
         // await new Promise(r => setTimeout(r, 500));
@@ -98,10 +99,5 @@ function SignIn(props) {
     </Formik>
   );
 }
-
-SignIn.propTypes = {
-  loginFunc: PropTypes.func,
-  isLoggedIn: PropTypes.bool,
-};
 
 export default SignIn;

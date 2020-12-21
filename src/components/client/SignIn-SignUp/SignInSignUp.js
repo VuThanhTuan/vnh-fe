@@ -1,23 +1,23 @@
-import React from "react";
-import Dialog from "@material-ui/core/Dialog";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import SwipeableViews from "react-swipeable-views";
-import { useTheme } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
-import "./SignInSignUp.module.scss";
-import SignIn from "./SignIn/SignIn";
-import Signup from "./Signup";
+import React from 'react';
+import Dialog from '@material-ui/core/Dialog';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import SwipeableViews from 'react-swipeable-views';
+import { useTheme } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import './SignInSignUp.module.scss';
+import SignIn from './SignIn/SignIn';
+import Signup from './Signup';
 
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    "aria-controls": `full-width-tabpanel-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
   };
 }
 
 function TabPanel(props) {
+  // eslint-disable-next-line react/prop-types
   const { children, value, index, ...other } = props;
 
   return (
@@ -34,6 +34,7 @@ function TabPanel(props) {
 }
 
 function SignInSignUp(props) {
+  // eslint-disable-next-line react/prop-types
   const { onClose, open } = props;
 
   const [value, setValue] = React.useState(0);
@@ -72,7 +73,7 @@ function SignInSignUp(props) {
           <Tab label="Đăng ký" {...a11yProps(1)} />
         </Tabs>
         <SwipeableViews
-          axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+          axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={value}
           onChangeIndex={handleChangeIndex}
         >

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -6,9 +7,18 @@ import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import MuiLink from '@material-ui/core/Link';
 
-const NextComposed = React.forwardRef(function NextComposed(props, ref) {
+const NextComposed = React.forwardRef((props, ref) => {
   // eslint-disable-next-line react/prop-types
-  const { as, href, replace, scroll, passHref, shallow, prefetch, ...other } = props;
+  const {
+    as,
+    href,
+    replace,
+    scroll,
+    passHref,
+    shallow,
+    prefetch,
+    ...other
+  } = props;
 
   return (
     <NextLink
@@ -44,11 +54,24 @@ function Link(props) {
   });
 
   if (naked) {
-    return <NextComposed className={className} ref={innerRef} href={href} {...other} />;
+    return (
+      <NextComposed
+        className={className}
+        ref={innerRef}
+        href={href}
+        {...other}
+      />
+    );
   }
 
   return (
-    <MuiLink component={NextComposed} className={className} ref={innerRef} href={href} {...other} />
+    <MuiLink
+      component={NextComposed}
+      className={className}
+      ref={innerRef}
+      href={href}
+      {...other}
+    />
   );
 }
 
@@ -63,4 +86,17 @@ Link.propTypes = {
   prefetch: PropTypes.bool,
 };
 
-export default React.forwardRef((props, ref) => <Link {...props} innerRef={ref} />);
+Link.defaultProps = {
+  activeClassName: 'active',
+  as: null,
+  className: null,
+  href: '/',
+  innerRef: null,
+  naked: false,
+  onClick: null,
+  prefetch: false,
+};
+
+export default React.forwardRef((props, ref) => (
+  <Link {...props} innerRef={ref} />
+));

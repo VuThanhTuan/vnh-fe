@@ -1,11 +1,11 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import PropTypes from 'prop-types';
 
-const Input = props => {
-  const { field, form, meta, startAdornment, onChange, error } = props;
-  const { onBlur, name, value } = field;
+const Input = (props) => {
+  // eslint-disable-next-line no-unused-vars
+  const { field, form, startAdornment, onChange, error } = props;
+  const { name, value } = field;
   return (
     <TextField
       error={!!error}
@@ -20,6 +20,19 @@ const Input = props => {
       style={{ width: '100%' }}
     />
   );
+};
+
+Input.propTypes = {
+  field: PropTypes.object.isRequired,
+  form: PropTypes.object.isRequired,
+  startAdornment: PropTypes.object,
+  onChange: PropTypes.func.isRequired,
+  error: PropTypes.string,
+};
+
+Input.defaultProps = {
+  startAdornment: null,
+  error: null,
 };
 
 export default Input;

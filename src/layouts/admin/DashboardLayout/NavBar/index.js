@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from 'react';
 // import { Link as RouterLink, useLocation } from "react-router-dom";
-import Link from "../../../../components/Link";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
@@ -12,7 +11,7 @@ import {
   List,
   Typography,
   makeStyles,
-} from "@material-ui/core";
+} from '@material-ui/core';
 import {
   AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
@@ -22,55 +21,56 @@ import {
   User as UserIcon,
   UserPlus as UserPlusIcon,
   Users as UsersIcon,
-} from "react-feather";
-import NavItem from "./NavItem";
+} from 'react-feather';
+import Link from '../../../../components/Link';
+import NavItem from './NavItem';
 
 const user = {
-  avatar: "/avatar_6.png",
-  jobTitle: "Senior Developer",
-  name: "Katarina Smith",
+  avatar: '/avatar_6.png',
+  jobTitle: 'Senior Developer',
+  name: 'Katarina Smith',
 };
 
 const items = [
   {
-    href: "/admin/dashboard",
+    href: '/admin/dashboard',
     icon: BarChartIcon,
-    title: "Dashboard",
+    title: 'Dashboard',
   },
   {
-    href: "/admin/customers",
+    href: '/admin/customers',
     icon: UsersIcon,
-    title: "Customers",
+    title: 'Customers',
   },
   {
-    href: "/admin/products",
+    href: '/admin/products',
     icon: ShoppingBagIcon,
-    title: "Products",
+    title: 'Products',
   },
   {
-    href: "/app/account",
+    href: '/app/account',
     icon: UserIcon,
-    title: "Account",
+    title: 'Account',
   },
   {
-    href: "/app/settings",
+    href: '/app/settings',
     icon: SettingsIcon,
-    title: "Settings",
+    title: 'Settings',
   },
   {
-    href: "/login",
+    href: '/login',
     icon: LockIcon,
-    title: "Login",
+    title: 'Login',
   },
   {
-    href: "/register",
+    href: '/register',
     icon: UserPlusIcon,
-    title: "Register",
+    title: 'Register',
   },
   {
-    href: "/404",
+    href: '/404',
     icon: AlertCircleIcon,
-    title: "Error",
+    title: 'Error',
   },
 ];
 
@@ -81,10 +81,10 @@ const useStyles = makeStyles(() => ({
   desktopDrawer: {
     width: 256,
     top: 64,
-    height: "calc(100% - 64px)",
+    height: 'calc(100% - 64px)',
   },
   avatar: {
-    cursor: "pointer",
+    cursor: 'pointer',
     width: 64,
     height: 64,
   },

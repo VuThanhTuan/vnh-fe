@@ -1,47 +1,47 @@
-import React, { useState } from "react";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import { useFormik, Formik, Form, Field } from "formik";
-import Input from "../../../Form/Input";
+import React from 'react';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
+import { Formik, Form, Field } from 'formik';
+import Input from '../../../Form/Input';
 
 const Signup = () => {
   const makeFormAttr = (pr) => ({
     userName: {
-      name: "userName",
-      label: "Tài khoản",
-      type: "text",
+      name: 'userName',
+      label: 'Tài khoản',
+      type: 'text',
       component: Input,
       value: pr.values.userName,
       onChange: pr.handleChange,
     },
     password: {
-      name: "password",
-      label: "Mật khẩu",
-      type: "password",
+      name: 'password',
+      label: 'Mật khẩu',
+      type: 'password',
       component: Input,
       value: pr.values.password,
       onChange: pr.handleChange,
     },
     rePassword: {
-      name: "rePassword",
-      label: "Xác nhận mật khẩu",
-      type: "password",
+      name: 'rePassword',
+      label: 'Xác nhận mật khẩu',
+      type: 'password',
       component: Input,
       value: pr.values.rePassword,
       onChange: pr.handleChange,
     },
     email: {
-      name: "email",
-      label: "Email",
-      type: "text",
+      name: 'email',
+      label: 'Email',
+      type: 'text',
       component: Input,
       value: pr.values.email,
       onChange: pr.handleChange,
     },
     address: {
-      name: "address",
-      label: "Địa chỉ",
-      type: "text",
+      name: 'address',
+      label: 'Địa chỉ',
+      type: 'text',
       component: Input,
       value: pr.values.address,
       onChange: pr.handleChange,
@@ -51,11 +51,11 @@ const Signup = () => {
   return (
     <Formik
       initialValues={{
-        userName: "",
-        password: "",
-        rePassword: "",
-        email: "",
-        address: "",
+        userName: '',
+        password: '',
+        rePassword: '',
+        email: '',
+        address: '',
       }}
     >
       {(pr) => {

@@ -1,6 +1,6 @@
-import { createStore, combineReducers } from "redux";
-import { HYDRATE, createWrapper } from "next-redux-wrapper";
-import count from "./app/reducer";
+import { createStore, combineReducers } from 'redux';
+import { HYDRATE, createWrapper } from 'next-redux-wrapper';
+import count from './app/reducer';
 
 const combinedReducer = combineReducers({
   count,
@@ -14,13 +14,11 @@ const reducer = (state, action) => {
     };
     if (state.count.count) nextState.count.count = state.count.count; // preserve count value on client side navigation
     return nextState;
-  } else {
-    return combinedReducer(state, action);
   }
+  return combinedReducer(state, action);
 };
 
-const initStore = () => {
-  return createStore(reducer);
-};
+const initStore = () => createStore(reducer);
 
+// eslint-disable-next-line import/prefer-default-export
 export const wrapper = createWrapper(initStore);

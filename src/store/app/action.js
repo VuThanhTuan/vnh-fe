@@ -1,7 +1,6 @@
 export const countActionTypes = {
-  ADD: "ADD",
+  ADD: 'ADD',
 };
 
-export const addCount = () => (dispatch) => {
-  return dispatch({ type: countActionTypes.ADD });
-};
+export const addCount = () => (dispatch) =>
+  dispatch({ type: countActionTypes.ADD });
