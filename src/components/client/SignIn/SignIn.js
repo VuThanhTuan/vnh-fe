@@ -8,7 +8,7 @@ import Dialog from '@material-ui/core/Dialog';
 import Slide from '@material-ui/core/Slide';
 import { Formik, Form, Field } from 'formik';
 import { makeStyles } from '@material-ui/core/styles';
-import Input from '../../Form/Input';
+import Input from '../../form/input';
 import SignInValidation from './validation';
 import appTheme from '../../../theme';
 import styles from './SignIn.module.scss';
