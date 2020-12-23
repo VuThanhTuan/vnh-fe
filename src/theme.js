@@ -25,6 +25,9 @@ const theme = createMuiTheme({
     color7: '#7551e8', // Tím
     color8: '#1458e9', // Xanh dương đậm
     transparency: 0.15, // Độ trong suốt, mặc định 15%
+    smallSize: 12,
+    mediumSize: 14,
+    bigSize: 16,
   },
 });
 

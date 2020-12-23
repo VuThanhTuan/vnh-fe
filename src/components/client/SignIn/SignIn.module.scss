@@ -1,0 +1,14 @@
+.dialogContainer {
+  // padding: 50px;
+  background-image: url('/images/idesign_vietsukieuhung_01.webp');
+  background-size: cover;
+  height: 400px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .loginAction {
+    margin-top: 20px;
+  }
+}

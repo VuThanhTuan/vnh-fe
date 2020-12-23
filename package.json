@@ -8,7 +8,7 @@
         "start": "next start",
         "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
         "lint-fix": "eslint \"**/*.js\" --ignore-pattern node_modules/ --fix",
-        "format": "prettier --config .prettierrc --write ."
+        "format": "prettier --write --write \"**/*.+(js|jsx|json|scss|css|md)\""
     },
     "husky": {
         "hooks": {
@@ -16,9 +16,8 @@
         }
     },
     "lint-staged": {
-        "**/*": [
+        "**/*.js": [
             "npm run lint",
-            "npm run format",
             "git add ."
         ]
     },
@@ -42,12 +41,16 @@
         "yup": "^0.32.8"
     },
     "devDependencies": {
+        "babel-eslint": "^10.1.0",
         "eslint": "^7.16.0",
         "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^7.1.0",
         "eslint-plugin-import": "^2.22.1",
         "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.3.0",
         "eslint-plugin-react": "^7.21.5",
         "eslint-plugin-react-hooks": "^4.2.0",
-        "husky": "^4.3.6"
+        "husky": "^4.3.6",
+        "prettier": "^2.2.1"
     }
 }

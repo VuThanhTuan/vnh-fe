@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux';
-import SignInSignUp from '../src/components/client/SignIn-SignUp/SignInSignUp';
+import SignIn from '../src/components/client/SignIn/SignIn';
 
 export default function Home() {
   // eslint-disable-next-line no-unused-vars
@@ -24,7 +24,7 @@ export default function Home() {
           <Button variant="contained" onClick={login} color="primary">
             Primary
           </Button>
-          <SignInSignUp open={open} onClose={handleClose} />
+          <SignIn open={open} onClose={handleClose} />
         </div>
       </Box>
     </Container>

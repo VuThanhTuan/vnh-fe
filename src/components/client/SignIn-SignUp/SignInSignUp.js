@@ -6,7 +6,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import './SignInSignUp.module.scss';
-import SignIn from './SignIn/SignIn';
+import SignIn from '../SignIn/SignIn';
 import Signup from './Signup';
 
 function a11yProps(index) {
