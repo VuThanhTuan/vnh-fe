@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { Formik, Form, Field } from 'formik';
-import Input from '../../../form/input';
+import Input from '../../form/input';
 
 const Signup = () => {
   const makeFormAttr = (pr) => ({

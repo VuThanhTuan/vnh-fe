@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux';
-import SignIn from '../src/components/client/SignIn/SignIn';
+import SignIn from '../src/components/client/signin/SignIn';
 
 export default function Home() {
   // eslint-disable-next-line no-unused-vars

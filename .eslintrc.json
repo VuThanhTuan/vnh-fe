@@ -26,6 +26,11 @@
         "endOfLine": "auto"
       }],
     "react/jsx-props-no-spreading": "off",
-    "react/forbid-prop-types": "off"
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": 0,
+    "react/require-extension": 0,
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-no-target-blank": 0,
+    "react/jsx-uses-vars": 2
   }
 }
