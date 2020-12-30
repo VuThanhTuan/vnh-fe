@@ -1,32 +1,14 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Box from '@material-ui/core/Box';
-import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux';
-import SignIn from '../src/components/client/signin/SignIn';
+import Layout from '../src/layouts/client/home-layout';
 
 export default function Home() {
   // eslint-disable-next-line no-unused-vars
   const counter = useSelector((state) => state.count);
-  const [open, setOpen] = React.useState(false);
 
-  const login = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
   return (
-    <Container maxWidth="sm">
-      <Box my={4}>
-        <div>
-          <Button variant="contained" onClick={login} color="primary">
-            Primary
-          </Button>
-          <SignIn open={open} onClose={handleClose} />
-        </div>
-      </Box>
-    </Container>
+    <Layout>
+      <div>Home page</div>
+    </Layout>
   );
 }
