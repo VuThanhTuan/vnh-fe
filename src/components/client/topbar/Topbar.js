@@ -39,8 +39,9 @@ const TopBar = () => {
   return (
     <div ref={headerElm} className={styles.topMenu}>
       <Container>
-        <div>
+        <div className={styles.topMenuDiv}>
           <h1 className={styles.pageTitle}>VNH</h1>
+          <div className={styles.spaceTitle} />
           <Button className={styles.pageAction} onClick={login} color="primary">
             Đăng nhập
           </Button>

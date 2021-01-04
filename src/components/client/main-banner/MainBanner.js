@@ -5,7 +5,7 @@ import styles from './MainBanner.module.scss';
 const MainBanner = () => {
   return (
     <Box className={styles['main-banner']}>
-      <div>Main Banner</div>
+      <div>Việt Sử Kiêu Hùng</div>
     </Box>
   );
 };
