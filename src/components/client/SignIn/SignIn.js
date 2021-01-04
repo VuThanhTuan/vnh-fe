@@ -73,7 +73,9 @@ function SignIn(props) {
   });
 
   // eslint-disable-next-line no-unused-vars
-  const loginFunc = () => {};
+  const loginFunc = (values) => {
+    console.log('===', values);
+  };
 
   return (
     <Dialog

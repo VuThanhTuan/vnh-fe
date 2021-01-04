@@ -26,17 +26,31 @@
 
   .pageAction {
     float: right;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+    &:hover {
+      color: antiquewhite;
+    }
+  }
+
+  .signInLink {
+    padding-right: 10px;
+  }
+
+  .signUpLink {
+    padding-left: 10px;
   }
 
   &.scroll {
-    // background: rgb(2, 0, 36);
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(2, 0, 36, 1) 0%,
-    //   rgba(55, 9, 121, 1) 35%,
-    //   rgba(0, 212, 255, 1) 100%
-    // );
-    background-color: #575353;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      #575353 35%,
+      #000 100%
+    );
+    // background-color: #575353;
     box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: -70px;

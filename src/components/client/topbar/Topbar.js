@@ -1,11 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import clsx from 'clsx';
-import PropTypes from 'prop-types';
+import React, { useEffect, useRef } from 'react';
 import Container from '@material-ui/core/Container';
-import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux';
 import SignIn from '../signin/SignIn';
 import styles from './Topbar.module.scss';
+
+// const ColorButton = withStyles(() => ({
+//   root: {
+//     color: '#fff',
+//   },
+// }))(Button);
 
 const TopBar = () => {
   // eslint-disable-next-line no-unused-vars
@@ -42,9 +45,28 @@ const TopBar = () => {
         <div className={styles.topMenuDiv}>
           <h1 className={styles.pageTitle}>VNH</h1>
           <div className={styles.spaceTitle} />
-          <Button className={styles.pageAction} onClick={login} color="primary">
+          <a
+            href
+            className={`${styles.pageAction} ${styles.signInLink}`}
+            onClick={login}
+          >
             Đăng nhập
-          </Button>
+          </a>
+          |
+          <a
+            href
+            className={`${styles.pageAction} ${styles.signUpLink}`}
+            onClick={login}
+          >
+            Đăng ký
+          </a>
+          {/* <ColorButton
+            className={styles.pageAction}
+            color="primary"
+            size="small"
+          >
+            Đăng ký
+          </ColorButton> */}
           <SignIn open={open} onClose={handleClose} />
         </div>
       </Container>
