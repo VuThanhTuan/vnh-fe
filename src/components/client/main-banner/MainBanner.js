@@ -5,7 +5,7 @@ import styles from './MainBanner.module.scss';
 const MainBanner = () => {
   return (
     <Box className={styles['main-banner']}>
-      <div>Bình Ngô Đại Chiến</div>
+      <div className="wow bounceInUp">Bình Ngô Đại Chiến</div>
     </Box>
   );
 };

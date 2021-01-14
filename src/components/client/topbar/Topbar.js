@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useRef } from 'react';
 import Container from '@material-ui/core/Container';
 import { useSelector } from 'react-redux';
+import Icon from '@material-ui/core/Icon';
 import SignIn from '../signin/SignIn';
 import styles from './Topbar.module.scss';
-
 // const ColorButton = withStyles(() => ({
 //   root: {
 //     color: '#fff',
@@ -43,23 +45,17 @@ const TopBar = () => {
     <div ref={headerElm} className={styles.topMenu}>
       <Container>
         <div className={styles.topMenuDiv}>
-          <h1 className={styles.pageTitle}>VNH</h1>
           <div className={styles.spaceTitle} />
-          <a
-            href
+          <Icon
+            className={`far fa-user ${styles.pageAction}`}
+            onClick={login}
+          />
+          {/* <b
             className={`${styles.pageAction} ${styles.signInLink}`}
             onClick={login}
           >
             Đăng nhập
-          </a>
-          |
-          <a
-            href
-            className={`${styles.pageAction} ${styles.signUpLink}`}
-            onClick={login}
-          >
-            Đăng ký
-          </a>
+          </b> */}
           {/* <ColorButton
             className={styles.pageAction}
             color="primary"

@@ -13,6 +13,23 @@ body {
   margin: 0;
   font-weight: 400;
   font-family: Roboto, Thu Phap, sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #41434f;
+    border-radius: 3px;
+  }
 }
 
 a {

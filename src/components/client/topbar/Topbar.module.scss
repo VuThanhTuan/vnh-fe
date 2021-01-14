@@ -17,7 +17,7 @@
   }
 
   .pageTitle {
-    font-size: 36px;
+    font-size: 48px;
     float: left;
     background: -webkit-linear-gradient(45deg, #ffffff, #000000 80%);
     -webkit-background-clip: text;
@@ -28,18 +28,10 @@
     float: right;
     color: #fff;
     cursor: pointer;
-    text-decoration: underline;
+
     &:hover {
       color: antiquewhite;
     }
-  }
-
-  .signInLink {
-    padding-right: 10px;
-  }
-
-  .signUpLink {
-    padding-left: 10px;
   }
 
   &.scroll {
@@ -47,7 +39,7 @@
     background: linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
-      #575353 35%,
+      #0C7771 35%,
       #000 100%
     );
     // background-color: #575353;

@@ -13,6 +13,7 @@ const theme = createMuiTheme({
     background: {
       default: '#fff',
     },
+    type: 'light',
     color1: '#01a8ee', // Xanh nước biển
     color2: '#f57761', // Cam đỏ
     color3: '#de1129', // Đỏ
