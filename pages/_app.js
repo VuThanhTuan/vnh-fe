@@ -4,14 +4,17 @@ import PropTypes from 'prop-types';
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import WOW from 'wowjs';
 import theme from '../src/theme';
 import { wrapper } from '../src/store/store';
+
+// setup wowjs for SSR
+const isServer = typeof window === 'undefined';
+const WOW = !isServer ? require('wow.js') : null;
 
 const WrappedApp = ({ Component, pageProps }) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
-    new WOW.WOW().init();
+    new WOW().init();
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);

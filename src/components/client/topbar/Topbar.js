@@ -20,8 +20,8 @@ const TopBar = () => {
 
   const handleScroll = () => {
     if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       headerElm.current.classList.add(styles.scroll);
     } else {

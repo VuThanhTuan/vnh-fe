@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { Container } from '@material-ui/core';
+import { Container, Box } from '@material-ui/core';
 import TopBar from '../../../components/client/topbar/Topbar';
 
 const Layout = (props) => {
   const { banner, content } = props;
   return (
-    <div>
+    <Box component="div">
       <TopBar />
       {banner}
       <Container>{content}</Container>
-    </div>
+    </Box>
   );
 };
 
